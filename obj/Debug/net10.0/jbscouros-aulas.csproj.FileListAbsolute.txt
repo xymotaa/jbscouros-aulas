@@ -95,3 +95,4 @@ C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\jbscouros-aulas.pdb
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\jbscouros-aulas.genruntimeconfig.cache
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\ref\jbscouros-aulas.dll
+C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\jbscouros-aulas.sourcelink.json

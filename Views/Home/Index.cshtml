@@ -128,6 +128,7 @@
     <script>
         const categories = ['Todos', 'Treinamentos', 'Reuniões', 'Eventos', 'Segurança do Trabalho', 'Compliance'];
         
+        // Para adicionar mais vídeos, inclua um novo objeto neste array.
         const videos = [
             { id: 1, title: 'Treinamento de Segurança Operacional - Planta Lins', duration: '45:20', thumbnail: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800', category: 'Treinamentos', date: 'Há 2 dias' },
             { id: 2, title: 'Workshop de Sustentabilidade e ESG 2024', duration: '1:12:05', thumbnail: 'https://images.unsplash.com/photo-1542601906990-b4d3fb773b09?auto=format&fit=crop&w=800', category: 'Eventos', date: 'Há 1 semana' },
@@ -151,7 +152,8 @@
         // Render Vídeos
         const grid = document.getElementById('video-grid');
         videos.forEach(v => {
-            const card = document.createElement('div');
+            const card = document.createElement('a');
+            card.href = '/Home/Watch?id=' + v.id;
             card.className = "group cursor-pointer flex flex-col bg-white rounded-sm overflow-hidden border border-[#E0E0E0] hover:border-[#D61F26] transition-all shadow-sm hover:shadow-xl";
             card.innerHTML = `
                 <div class="relative aspect-video overflow-hidden bg-black">
