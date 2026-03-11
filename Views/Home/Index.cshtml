@@ -1,0 +1,187 @@
+﻿@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBS COUROS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #F4F4F4; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #E0E0E0; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #D61F26; }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#333333] overflow-hidden">
+    <div id="root" class="flex flex-col h-screen">
+        <!-- Top Header -->
+        <header class="h-16 bg-white border-b-4 border-[#D61F26] flex items-center justify-between px-8 z-20 shrink-0 shadow-sm">
+            <div class="flex items-center gap-10">
+                <div class="flex items-center gap-2">
+                    <div class="flex flex-col">
+                        <span class="font-black text-[#333333] text-xl tracking-tighter leading-none uppercase">JBS <span class="text-[#D61F26]">COUROS</span></span>
+                    </div>
+                </div>
+                
+                <nav class="hidden lg:flex items-center gap-8 h-16">
+                    <!-- botões que podem ser adicionados no header -->
+                    <!-- <button class="text-xs font-bold uppercase tracking-wider h-full px-2 border-b-4 border-transparent text-gray-500 hover:text-[#333333]">Departamentos</button> -->
+                </nav>
+            </div>
+
+            <!-- Busca -->
+            <div class="flex-1 max-w-lg px-5 hidden md:block">
+                <div class="relative">
+                    <input type="text" placeholder="O que você deseja?" 
+                           class="w-full bg-[#F4F4F4] border border-[#E0E0E0] rounded-sm py-2 pl-4 pr-10 focus:outline-none focus:border-[#D61F26] transition-all text-sm placeholder-gray-400" />
+                    <i data-lucide="search" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Area -->
+        <main class="flex-1 overflow-y-auto bg-[#F9F9F9] custom-scrollbar">
+            <!-- Banner Destaque (Conforme Imagem 3) -->
+            <!-- <section class="bg-white border-b border-[#E0E0E0] px-8 py-10">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+                    <div class="flex-1 space-y-6">
+                        <span class="inline-block bg-[#D61F26] text-white text-[10px] font-black px-2 py-1 uppercase tracking-tighter">Destaque do Mês</span>
+                        <h1 class="text-5xl font-black text-[#333333] leading-[0.9] uppercase italic tracking-tighter">CULTURA DE <br/>SEGURANÇA: <br/><span class="text-[#D61F26]">NOSSA PRIORIDADE #1</span></h1>
+                        <p class="text-gray-500 text-sm max-w-md leading-relaxed">Assista à nova série de vídeos sobre os protocolos de segurança que garantem a excelência e o bem-estar em todas as nossas unidades.</p>
+                        <button class="bg-[#D61F26] text-white px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest hover:bg-[#b81a20] transition-all shadow-lg flex items-center gap-3">
+                            <i data-lucide="play" class="fill-white w-4 h-4"></i> COMEÇAR TREINAMENTO
+                        </button>
+                    </div>
+                    <div class="w-full md:w-1/2 relative group">
+                        <div class="absolute -inset-2 bg-[#D61F26]/10 rounded-sm blur-xl group-hover:bg-[#D61F26]/20 transition-all"></div>
+                        <div class="relative aspect-video rounded-sm overflow-hidden shadow-2xl border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000" class="w-full h-full object-cover" alt="Segurança" />
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- Filtros (Conforme Imagem 3) -->
+            <div class="bg-white border-b border-[#E0E0E0] px-8 py-4 flex items-center sticky top-0 z-10 shadow-sm">
+                <div class="flex items-center gap-2 text-[10px] font-black text-gray-400 uppercase tracking-widest shrink-0">
+                    <i data-lucide="filter" class="w-3 h-3"></i> FILTRAR:
+                </div>
+                
+                <div class="flex justify-center flex-1">
+                    <div class="flex gap-2 overflow-x-auto no-scrollbar" id="category-filters">
+                        <!-- Categorias JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Vídeos (Conforme Imagem 4) -->
+            <div class="px-8 py-12 max-w-7xl mx-auto">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-1.5 h-8 bg-[#D61F26]"></div>
+                    <h2 class="text-2xl font-black text-[#333333] uppercase tracking-tighter italic">Últimos Lançamentos</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="video-grid">
+                    <!-- Vídeos JS -->
+                </div>
+
+                <!-- Banner Feedback (Estilo JBS Industrial) -->
+                <div class="mt-20 bg-[#333333] p-10 rounded-sm flex flex-col md:flex-row items-center justify-between gap-8 border-l-[12px] border-[#D61F26] shadow-xl">
+                    <div class="space-y-2">
+                        <h3 class="text-white font-black text-2xl uppercase italic tracking-tighter">Não encontrou o conteúdo?</h3>
+                        <p class="text-gray-400 text-sm font-medium uppercase tracking-wider">Sugira novos treinamentos para o seu setor.</p>
+                    </div>
+                    <button class="bg-white text-[#333333] px-10 py-4 rounded-sm font-black text-xs uppercase tracking-[0.2em] hover:bg-[#D61F26] hover:text-white transition-all shadow-md">
+                        ENVIAR SUGESTÃO
+                    </button>
+                </div>
+
+                <footer class="mt-24 py-12 border-t border-[#E0E0E0] flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">
+                    <span>© 2024 JBS S.A. • PORTAL DE COMUNICAÇÃO</span>
+                    <div class="flex gap-10">
+                        <a href="#" class="hover:text-[#D61F26] transition-colors border-b border-transparent hover:border-[#D61F26]">SUPORTE TI</a>
+                        <a href="#" class="hover:text-[#D61F26] transition-colors border-b border-transparent hover:border-[#D61F26]">SEGURANÇA</a>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const categories = ['Todos', 'Treinamentos', 'Reuniões', 'Eventos', 'Segurança do Trabalho', 'Compliance'];
+        
+        const videos = [
+            { id: 1, title: 'Treinamento de Segurança Operacional - Planta Lins', duration: '45:20', thumbnail: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800', category: 'Treinamentos', date: 'Há 2 dias' },
+            { id: 2, title: 'Workshop de Sustentabilidade e ESG 2024', duration: '1:12:05', thumbnail: 'https://images.unsplash.com/photo-1542601906990-b4d3fb773b09?auto=format&fit=crop&w=800', category: 'Eventos', date: 'Há 1 semana' },
+            { id: 3, title: 'Mensagem do CEO - Resultados Globais Q3', duration: '58:00', thumbnail: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800', category: 'Reuniões', date: 'Há 3 dias' },
+            { id: 4, title: 'Boas Práticas de Fabricação (BPF)', duration: '12:15', thumbnail: 'https://images.unsplash.com/photo-1566933267003-31119463286d?auto=format&fit=crop&w=800', category: 'Compliance', date: 'Ontem' },
+            { id: 5, title: 'Manual do Novo Colaborador - Administrativo', duration: '08:45', thumbnail: 'https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&w=800', category: 'Treinamentos', date: 'Há 1 mês' },
+            { id: 6, title: 'Planejamento Logístico para 2025', duration: '2:30:00', thumbnail: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800', category: 'Reuniões', date: 'Há 5 dias' },
+            { id: 7, title: 'Integração: Valores e Cultura Alimentar', duration: '15:30', thumbnail: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800', category: 'Treinamentos', date: 'Há 2 semanas' },
+            { id: 8, title: 'Inovação na Cadeia de Suprimentos', duration: '34:10', thumbnail: 'https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=800', category: 'Treinamentos', date: 'Há 4 dias' },
+        ];
+
+        // Render Filtros
+        const filterContainer = document.getElementById('category-filters');
+        categories.forEach(cat => {
+            const btn = document.createElement('button');
+            btn.className = `px-6 py-2 rounded-sm text-[11px] font-bold whitespace-nowrap transition-all uppercase border ${cat === 'Todos' ? 'bg-[#333333] text-white border-[#333333]' : 'bg-white text-gray-500 border-[#E0E0E0] hover:border-[#D61F26] hover:text-[#D61F26]'}`;
+            btn.innerText = cat;
+            filterContainer.appendChild(btn);
+        });
+
+        // Render Vídeos
+        const grid = document.getElementById('video-grid');
+        videos.forEach(v => {
+            const card = document.createElement('div');
+            card.className = "group cursor-pointer flex flex-col bg-white rounded-sm overflow-hidden border border-[#E0E0E0] hover:border-[#D61F26] transition-all shadow-sm hover:shadow-xl";
+            card.innerHTML = `
+                <div class="relative aspect-video overflow-hidden bg-black">
+                    <img src="${v.thumbnail}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" />
+                    <span class="absolute bottom-2 right-2 bg-[#D61F26] text-white px-2 py-0.5 rounded-sm text-[9px] font-black">${v.duration}</span>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                        <div class="w-12 h-12 bg-[#D61F26] rounded-full flex items-center justify-center shadow-2xl transform scale-75 group-hover:scale-100 transition-transform">
+                            <i data-lucide="play" class="text-white fill-white w-6 h-6 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 flex flex-col gap-3">
+                    <span class="text-[9px] font-black text-[#D61F26] uppercase tracking-[0.2em]">${v.category}</span>
+                    <h3 class="font-bold text-[13px] text-[#333333] group-hover:text-[#D61F26] transition-colors line-clamp-2 leading-tight h-10 uppercase tracking-tight">
+                        ${v.title}
+                    </h3>
+                    <div class="flex items-center justify-between mt-2 pt-3 border-t border-[#F4F4F4]">
+                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">${v.date}</span>
+                        <div class="flex gap-3 text-gray-300">
+                            <i data-lucide="clock" class="w-3.5 h-3.5 hover:text-[#D61F26] transition-colors"></i>
+                            <i data-lucide="more-vertical" class="w-3.5 h-3.5 hover:text-[#D61F26] transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        // Initialize Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
