@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JBS COUROS AULAS</title>
+    <title>JBS COUROS AULAx</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -184,7 +184,6 @@
         document.getElementById('video-date').textContent = current.date;
         document.getElementById('video-title').textContent = current.title;
         document.getElementById('video-description').textContent = current.description;
-        document.title = 'JBS COUROS - ' + current.title;
 
         // ─── Renderiza sugestões (primeiros 2 vídeos diferentes do atual) ────────
         const suggestions = videos.filter(v => v.id !== current.id).slice(0, 2);
