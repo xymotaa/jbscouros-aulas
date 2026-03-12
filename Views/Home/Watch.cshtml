@@ -28,8 +28,8 @@
         #player-overlay { transition: opacity 0.3s ease; }
     </style>
 </head>
-<body class="bg-[#F9F9F9] text-[#333333]">
-    <div class="flex flex-col min-h-screen">
+<body class="bg-[#F9F9F9] text-[#333333] overflow-hidden">
+    <div class="flex flex-col h-screen">
 
         <!-- Header -->
         <header class="h-16 bg-white border-b-4 border-[#D61F26] flex items-center justify-between px-8 z-20 shrink-0 shadow-sm sticky top-0">
@@ -53,7 +53,7 @@
         </header>
 
         <!-- Main Content -->
-        <main class="flex-1 custom-scrollbar">
+        <main class="flex-1 overflow-y-auto custom-scrollbar">
             <div class="max-w-5xl mx-auto px-4 md:px-8 py-8">
 
                 <!-- Player -->
