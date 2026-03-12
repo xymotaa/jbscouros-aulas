@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<jbscouros_aulas.Models.VideoViewModel>
 @{
     Layout = "_LayoutJBS";
-    ViewData["Title"] = "JBS Aulas";
+    ViewData["Title"] = "Tela Principal - JBS COUROS";
 
     // Categorias únicas extraídas do catálogo para a barra de filtros
     var categories = new[] { "Todos" }.Concat(Model.Select(v => v.Category).Distinct());
