@@ -21,7 +21,6 @@ C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\scopedcss\bundle\jbscouros-aulas.styles.css
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\scopedcss\projectbundle\jbscouros-aulas.bundle.scp.css
-C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\compressed\h3u442eqs7-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\compressed\kxl6s6pe0s-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\compressed\apm4lpqteu-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\compressed\g50qwtdpcm-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -96,3 +95,4 @@ C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\jbscouros-aulas.genruntimeconfig.cache
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\ref\jbscouros-aulas.dll
 C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\jbscouros-aulas.sourcelink.json
+C:\Users\barro\OneDrive\Documentos\Projetos dotnet\jbscouros-aulas\obj\Debug\net10.0\compressed\h3u442eqs7-{0}-vrtgwt73hf-vrtgwt73hf.gz

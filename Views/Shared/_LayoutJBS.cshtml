@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Fontes corporativas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (utilitários) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Estilos globais JBS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="bg-[#F4F6F9] text-[#1A1A2E] overflow-hidden font-sans">
+    <div class="flex flex-col h-screen">
+
+        @* Cabeçalho compartilhado entre todas as telas JBS Aulas *@
+        @await Html.PartialAsync("_HeaderJBS")
+
+        <!-- Área de conteúdo principal com scroll customizado -->
+        <main class="flex-1 overflow-y-auto custom-scrollbar">
+            @RenderBody()
+        </main>
+
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
